@@ -1,0 +1,218 @@
+/* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Baloo+Bhaijaan+2:wght@400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barriecito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Danfo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap');
+body {
+  font-family:"Gowun Batang", serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+  max-width: 920px;
+  margin: auto;
+  padding: 10px;
+}
+
+header {
+  background-color: #f0f0f0;
+  padding: 20px;
+  text-align: left;
+  font-weight: 800;
+  margin-top: auto;
+  line-height: 0.7;
+  
+}
+
+header img{
+  width: 100px;
+  border-radius: 8123131px;
+  background-color: #f8f9fa;
+  border-radius: 20px;
+  /* box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1); */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  text-align: center;
+  border: 1px dashed #cacaca;
+  transform: rotate(-5deg);
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+header img:hover {
+  animation: shake 2s;
+  animation-iteration-count: infinite;
+}
+
+header p {
+  font-size: 20px;
+  color: rgb(95, 94, 94);
+}
+
+header a {
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+}
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  font-family: "Danfo", serif;;
+}
+
+main {
+  padding: 20px;
+}
+main p {
+  font-size: 24px;
+  color: rgb(95, 94, 94);
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+section a {
+  color: rgb(95, 94, 94);
+  font-size: 24px;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #f0f0f0;
+}
+
+
+.card-container {
+  background-color: #f8f9fa;
+  border-radius: 16px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  padding-bottom: 20px;
+  text-align: center;
+  transition: all 0.2s;
+  box-sizing: border-box;
+  max-width: 125%;
+  
+}
+
+
+.card-container:hover {
+  transform: scale(1) rotate(2deg);
+}
+.card-content h1{
+  font-weight: 800;
+}
+
+.image-placeholder {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 0px;
+  overflow: hidden;
+  line-height: 0.01;
+}
+
+.image-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Ensures the entire image fits without cropping */
+  border-radius: 4px;
+}
+
+.card-content {
+  text-align: left;
+  
+}
+
+.card-content h1 {
+  font-size: 36px;
+  line-height: 0.1;
+}
+
+.work-duration {
+  font-size: 16px;
+  color: rgb(95, 94, 94);
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+.description {
+  font-size: 16px;
+  color: rgb(95, 94, 94);
+  margin-bottom: 20px;
+  font-weight: 800;
+}
+
+.tags {
+  display: flex;
+  justify-content: LEFT;
+  gap: 10px;
+}
+
+.tag {
+  background-color: #e0e7ff;
+  color: #000000;
+  font-size: 16px;
+  padding: 2px 2px;
+}
+
+/* MEDIA QUERIES FOR RESPONSIVENESS */
+@media (max-width: 768px) {
+  .card-container {
+      padding: 15px;
+  }
+
+  .image-placeholder {
+      height: 200px; /* Smaller image for tablets */
+  }
+
+  h1 {
+      font-size: 1.75rem;
+  }
+
+  .description {
+      font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-container {
+      padding: 10px;
+  }
+
+  .image-placeholder {
+      height: 150px; /* Further reduce image size for mobile */
+  }
+
+  h1 {
+      font-size: 1.5rem;
+  }
+
+  .description {
+      font-size: 0.8rem;
+  }
+
+  .tag {
+      font-size: 0.75rem; /* Smaller tags on mobile */
+      padding: 3px 8px;
+  }
+}
